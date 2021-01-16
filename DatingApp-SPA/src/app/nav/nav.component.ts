@@ -14,10 +14,10 @@ export class NavComponent implements OnInit {
   }
 
   login(){
-    this.authService.login(this.model).subscribe(resonse => {
+    this.authService.login(this.model).subscribe(() => {
       console.log('logged in successfully');
     }, error => {
-      console.log('error occured while login');
+      console.log(error);
     });
   }
 
